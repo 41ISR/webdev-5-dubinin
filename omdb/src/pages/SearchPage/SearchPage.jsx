@@ -26,8 +26,15 @@ const SearchPage = () => {
 
         try {
             const data = await searchMovies(searchTerm);
-            setMovies(data.Search || []);
+            console.log('API Response:', data); // Для отладки
+            
+            if (data.Search && Array.isArray(data.Search)) {
+                setMovies(data.Search);
+            } else {
+                setMovies([]);
+            }
         } catch (err) {
+            console.error('Search error:', err); // Для отладки
             setError(err.message || "Произошла ошибка при поиске");
             setMovies([]);
         } finally {
@@ -70,4 +77,4 @@ const SearchPage = () => {
     );
 };
 
-export default SearchPage
+export default SearchPage;

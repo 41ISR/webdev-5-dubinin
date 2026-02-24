@@ -1,9 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 import './MovieCard.css';
 
-const MovieCard = () => {
+const MovieCard = ({ movie }) => {
     const navigate = useNavigate();
     const defaultImage = 'https://via.placeholder.com/300x450?text=No+Image';
+
+    // Проверка на наличие данных
+    if (!movie) {
+        console.error('MovieCard: movie prop is missing');
+        return null;
+    }
 
     const handleClick = () => {
         navigate(`/movie/${movie.imdbID}`);
@@ -24,4 +30,4 @@ const MovieCard = () => {
     );
 };
 
-export default MovieCard
+export default MovieCard;

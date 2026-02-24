@@ -1,0 +1,14 @@
+.error-message {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.error-message p {
+  color: #c33;
+  margin: 0;
+  font-size: 16px;
+}

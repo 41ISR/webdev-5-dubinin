@@ -1,0 +1,128 @@
+.movie-details {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+
+.movie-details__content {
+    display: flex;
+    gap: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.movie-details__poster {
+    flex-shrink: 0;
+}
+
+.movie-details__poster img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-details__info {
+    flex: 1;
+}
+
+.movie-details__info h1 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 32px;
+}
+
+.movie-details__rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.rating-label {
+    font-size: 18px;
+}
+
+.rating-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+.movie-details__meta {
+    margin-bottom: 25px;
+}
+
+.movie-details__meta p {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.movie-details__meta strong {
+    color: #333;
+    margin-right: 8px;
+}
+
+.movie-details__plot {
+    margin-bottom: 20px;
+}
+
+.movie-details__plot h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.movie-details__plot p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.movie-details__awards {
+    padding: 15px;
+    background-color: #fff3cd;
+    border-left: 4px solid #f39c12;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .movie-details__content {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .movie-details__poster img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .movie-details__info h1 {
+        font-size: 24px;
+    }
+}
